@@ -178,7 +178,7 @@ export default function NeedForm({ hospitals, onClose }) {
           </select>
           <button type="button" onClick={addItem}
             className="w-1/3 rounded-lg bg-slate-800 text-white font-semibold text-sm">
-            + Agregar
+            +
           </button>
         </div>
 
