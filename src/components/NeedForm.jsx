@@ -170,14 +170,14 @@ export default function NeedForm({ hospitals, onClose }) {
 
         <div className="flex gap-3 mb-3">
           <input type="number" min="1" placeholder="Cantidad" value={quantity}
-            onChange={(e) => setQuantity(e.target.value)} className="w-1/3 p-3 border border-gray-300 rounded-lg" />
-          <select value={urgency} onChange={(e) => setUrgency(e.target.value)} className="w-1/3 p-3 border border-gray-300 rounded-lg">
+            onChange={(e) => setQuantity(e.target.value)} className="w-2/6 p-3 border border-gray-300 rounded-lg" />
+          <select value={urgency} onChange={(e) => setUrgency(e.target.value)} className="w-3/6 p-3 border border-gray-300 rounded-lg">
             <option value="alta">Urgencia alta</option>
             <option value="media">Urgencia media</option>
             <option value="baja">Urgencia baja</option>
           </select>
           <button type="button" onClick={addItem}
-            className="w-1/3 rounded-lg bg-slate-800 text-white font-semibold text-sm">
+            className="w-1/6 rounded-lg bg-slate-800 text-white font-semibold text-sm">
             +
           </button>
         </div>
