@@ -28,6 +28,13 @@ export const HospitalsService = {
   },
 };
 
+export const StatsService = {
+  get: async () => {
+    const { data } = await api.get('/stats/');
+    return data; // { active_hospitals, open_needs, fulfilled_needs }
+  },
+};
+
 export const NeedsService = {
   create: async (payload) => {
     const { data } = await api.post('/needs/', payload);

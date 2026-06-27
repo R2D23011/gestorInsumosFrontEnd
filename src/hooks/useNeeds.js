@@ -1,6 +1,14 @@
 import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
-import { HospitalsService, NeedsService } from '../services/api.js';
+import { HospitalsService, NeedsService, StatsService } from '../services/api.js';
 import { QUERY_KEYS } from '../config/constants.js';
+
+export const useStats = () => {
+  return useQuery({
+    queryKey: ['stats'],
+    queryFn: () => StatsService.get(),
+    staleTime: 1000 * 60,
+  });
+};
 
 export const useHospitals = ({ state = '', city = '', page = 1 } = {}) => {
   return useQuery({
